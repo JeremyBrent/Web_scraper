@@ -14,7 +14,7 @@
     <div class="jumbotron text-center"
       style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/PIA23302-FirstHumansOnMars-ArtistConcept.jpg/800px-PIA23302-FirstHumansOnMars-ArtistConcept.jpg');background-repeat:no-repeat;background-size: 100vw;">
       <h1 style="color: #451804;">Visit Mars</h1>
-      <p style="color: #451804;"><strong>Press Button Velowto Start Scraping Mars</strong></p>
+      <p style="color: #451804;"><strong>Press Button Below to Start Scraping Mars</strong></p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
     </div>
   </div>
@@ -31,30 +31,25 @@
   </div>
 
   <div class="container">
-    <div class="col col-12">
+    
 
       <!-- Featured Img -->
       <div class="col col-lg-6 col-6">
         <h2 style="color: #451804;">Today's Featured Image</h2>
         <img src="{{ mars.Mars_image }}" class="img-fluid">
       </div>
-
       <!--Latest Tweet-->
       <div class="col col-lg-12 col-12">
-        <div class="col col-lg-12 col-12">
-          <h2 style="color: #451804;">Here is the latest weather from Mars</h2>
-          <p style="color: #451804;"> {{ mars.weather}}</p>
-        </div>
-
-        <div class="col col-lg-6 col-6">
-          <h2 style="color: #451804;">Mars Facts</h2>
-          <table>{{ mars.facts|safe }}</table>
-        </div>
-
+        <h2 style="color: #451804;">Here is the latest weather from Mars</h2>
+        <p style="color: #451804;"> {{ mars.weather}}</p>
       </div>
-
+      <!-- Wiki table -->
+      <div class="col col-lg-6 col-6">
+        <h2 style="color: #451804;">Mars Facts</h2>
+        <table>{{ mars.facts|safe }}</table>
+      </div>
     </div>
-  </div>
+  
 
   <!-- Hemishpere Section -->
   <div class="container">
