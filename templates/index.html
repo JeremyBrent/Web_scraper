@@ -6,17 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mars</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/css/bootstrap.min-3.css">
-
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' type='text/css' href='../Assets/css/style.css'>
 </head>
 
-<body class=>
-  <div class="container-fluid">
-    <div class="jumbotron text-center" style="background-image: url(https://wallpaperplay.com/walls/full/c/9/0/11412.jpg)">
-      <h1>Visit Mars</h1>
-      <p>Press Button to Start Scraping Mars</p>
+<body style="background-color: #e77d11;">
+  <div class="container-fluid mt-5">
+    <div class="jumbotron text-center"
+      style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/PIA23302-FirstHumansOnMars-ArtistConcept.jpg/800px-PIA23302-FirstHumansOnMars-ArtistConcept.jpg');background-repeat:no-repeat;background-size: 100vw;">
+      <h1 style="color: #451804;">Visit Mars</h1>
+      <p style="color: #451804;"><strong>Press Button Velowto Start Scraping Mars</strong></p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
     </div>
   </div>
@@ -25,9 +24,9 @@
   <div class="container">
     <div class="col col-12">
 
-      <h2>Check out the lastest news from Mars</h2>
-      <p> Today's Headline: {{ mars.news_title }}</p>
-      <p> Summary: {{ mars.news_paragraph }}</p>
+      <h2 style="color: #451804;"> Check out the lastest news from Mars</h2>
+      <p style="color: #451804;"> <strong> Today's Headline: </strong>{{ mars.news_title }}</p>
+      <p style="color: #451804;"> <strong> Summary: </strong>{{ mars.news_paragraph }}</p>
 
     </div>
   </div>
@@ -37,20 +36,20 @@
 
       <!-- Featured Img -->
       <div class="col col-lg-6 col-6">
-        <h2>Today's Featured Image</h2>
-        <img src="{{ mars.Mars_image }}" class="thumbnail img-responsive">
+        <h2 style="color: #451804;">Today's Featured Image</h2>
+        <img src="{{ mars.Mars_image }}" class="img-fluid">
       </div>
 
       <!--Latest Tweet-->
-      <div class="col col-lg-6 col-6">
-        <div class="col col-lg-6 col-6">
-          <h2>Here is the latest weather from Mars</h2>
-          <p> {{ mars.weather}}</p>
+      <div class="col col-lg-12 col-12">
+        <div class="col col-lg-12 col-12">
+          <h2 style="color: #451804;">Here is the latest weather from Mars</h2>
+          <p style="color: #451804;"> {{ mars.weather}}</p>
         </div>
 
         <div class="col col-lg-6 col-6">
-          <h2>Some cool Mars Facts</h2>
-          <p>{{ mars.facts|safe}}</p>
+          <h2 style="color: #451804;">Mars Facts</h2>
+          <table>{{ mars.facts|safe }}</table>
         </div>
 
       </div>
@@ -61,42 +60,21 @@
   <!-- Hemishpere Section -->
   <div class="container">
     <div class="col col-12">
-      <h2> Here is a closer look at the hemispheres of Mars </h2>
+      <h2 style="color: #451804;"> Here is a closer look at the hemispheres of Mars </h2>
 
+     
       <div class="row">
+        {% for hemisphere in mars.hemispheres %}
+        <div class="col col-lg-5 col-6 ">
 
-        <div class="col col-lg-5 col-6">
-              
-          <p> {{ mars.hemispheres[0].title }}</p>
-          <img src="{{ mars.hemispheres[0].img_url }}" class="thumbnail img-responsive">
-              
+          <h4 style="color: #451804;"> {{ hemisphere.title }}</h4>
+          <img src="{{ hemisphere.img_url }}" class="img-fluid">
+
         </div>
-
-        <div class="col col-lg-5 col-6">
-              
-          <p> {{ mars.hemispheres[1].title }}</p>
-          <img src="{{ mars.hemispheres[1].img_url }}" class="thumbnail img-responsive">
-              
-        </div>
-
+        {% endfor %}
       </div>
+     
 
-      <div class="row">
-        <div class="col col-lg-5 col-6">
-              
-          <p> {{ mars.hemispheres[2].title }}</p>
-          <img src="{{ mars.hemispheres[2].img_url }}" class="thumbnail img-responsive">
-              
-        </div>
-
-        <div class="col col-lg-5 col-6">
-              
-          <p> {{ mars.hemispheres[3].title }}</p>
-          <img src="{{ mars.hemispheres[3].img_url }}" class="thumbnail img-responsive">
-              
-        </div>
-
-      </div>
     </div>
 
   </div>

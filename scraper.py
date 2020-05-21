@@ -34,6 +34,7 @@ def scrape():
     
     ## Nasa Mars Images
     url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+    baseurl = 'https://www.jpl.nasa.gov/'
     browser.visit(url)
     browser.click_link_by_id('full_image')
     time.sleep(5)
@@ -41,7 +42,7 @@ def scrape():
     soup = bs(html,'html.parser')
     url = browser.url
     marsimgsrc = soup.find('div',id="fancybox-lock").find('img',class_='fancybox-image')["src"]
-    fullurl = url + marsimgsrc
+    fullurl = baseurl + marsimgsrc
     mars_dict["Mars_image"] = fullurl
     
     ## Mars Twitter Weather
@@ -52,6 +53,7 @@ def scrape():
     soup = bs(html,'html.parser')
     mars_weather = soup.find('div',class_='css-901oao r-hkyrab r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0').find('span').text
     mars_dict["weather"] = mars_weather
+    
     ## Mars facts table
     url = 'https://space-facts.com/mars/'
     tables = pd.read_html(url)
