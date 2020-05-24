@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #e77d11;">
-  <div class="container-fluid mt-5">
+<body class='my-5'style="background-color: #e77d11;">
+  <div class="container-fluid rounded ">
     <div class="jumbotron text-center"
       style="background-image: url('https://miro.medium.com/max/4000/1*-Q7N2bQ6cCMly7bCRuGlNA.jpeg');background-repeat:no-repeat;background-size: 100vw;">
       <h1 style="color: #451804;">Visit Mars</h1>
@@ -21,7 +21,7 @@
 
   <!-- News Section -->
   <div class="container">
-    <div class="col col-12">
+    <div class="col col-12 my-5">
 
       <h2 style="color: #451804;"> Check out the lastest news from Mars</h2>
       <p style="color: #451804;"> <strong> Today's Headline: </strong>{{ mars.news_title }}</p>
@@ -34,17 +34,17 @@
     
 
       <!-- Featured Img -->
-      <div class="col col-lg-6 col-6">
+      <div class="col col-lg-6 col-6  mb-5">
         <h2 style="color: #451804;">Today's Featured Image</h2>
-        <img src="{{ mars.Mars_image }}" class="img-fluid">
+        <img src="{{ mars.Mars_image }}" class="img-fluid rounded shadow-lg p-3">
       </div>
       <!--Latest Tweet-->
-      <div class="col col-lg-12 col-12">
+      <div class="col col-lg-12 col-12 mb-5">
         <h2 style="color: #451804;">Here is the latest weather from Mars</h2>
         <p style="color: #451804;"> {{ mars.weather}}</p>
       </div>
       <!-- Wiki table -->
-      <div class="col col-lg-6 col-6">
+      <div class="col col-lg-6 col-6  mb-5">
         <h2 style="color: #451804;">Mars Facts</h2>
         <table>{{ mars.facts|safe }}</table>
       </div>
@@ -59,10 +59,10 @@
      
       <div class="row">
         {% for hemisphere in mars.hemispheres %}
-        <div class="col col-lg-5 col-6 ">
+        <div class="col col-lg-5 col-6 mt-3">
 
           <h4 style="color: #451804;"> {{ hemisphere.title }}</h4>
-          <img src="{{ hemisphere.img_url }}" class="img-fluid">
+          <img src="{{ hemisphere.img_url }}" class="img-fluid rounded shadow-lg p-3 mt-3">
 
         </div>
         {% endfor %}
