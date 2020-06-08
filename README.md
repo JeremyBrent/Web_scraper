@@ -1,6 +1,10 @@
 # Web Scraper 
 
-## How to run the code:
+## Displayed web page:
+![Mars scraper homepage!](Assets/screenshots/screenshot.png "Mars scraper homepage")
+
+
+## How to run the code (TBA -- I am having chromedriver bugs):
 1. Clone the repository to your local computer, python
 2. If you are using Windows, in the scrape_mars.py file, you will need to uncomment lines 9-10 and comment lines 13-14.
 3. Open you terminal.
