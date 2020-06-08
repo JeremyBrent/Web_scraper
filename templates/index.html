@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mars</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body class='my-5'style="background-color: #e77d11;">
+<body class='my-5' style="background-color: #e77d11;">
   <div class="container-fluid rounded ">
     <div class="jumbotron text-center"
       style="background-image: url('https://miro.medium.com/max/4000/1*-Q7N2bQ6cCMly7bCRuGlNA.jpeg');background-repeat:no-repeat;background-size: 100vw;">
@@ -31,32 +32,32 @@
   </div>
 
   <div class="container">
-    
 
-      <!-- Featured Img -->
-      <div class="col col-lg-6 col-6  mb-5">
-        <h2 style="color: #451804;">Today's Featured Image</h2>
-        <img src="{{ mars.Mars_image }}" class="img-fluid rounded shadow-lg p-3">
-      </div>
-      <!--Latest Tweet-->
-      <div class="col col-lg-12 col-12 mb-5">
-        <h2 style="color: #451804;">Here is the latest weather from Mars</h2>
-        <p style="color: #451804;"> {{ mars.weather}}</p>
-      </div>
-      <!-- Wiki table -->
-      <div class="col col-lg-6 col-6  mb-5">
-        <h2 style="color: #451804;">Mars Facts</h2>
-        <table>{{ mars.facts|safe }}</table>
-      </div>
+
+    <!-- Featured Img -->
+    <div class="col col-lg-6 col-6  mb-5">
+      <h2 style="color: #451804;">Today's Featured Image</h2>
+      <img src="{{ mars.Mars_image }}" class="img-fluid rounded shadow-lg p-3">
     </div>
-  
+    <!--Latest Tweet-->
+    <div class="col col-lg-12 col-12 mb-5">
+      <h2 style="color: #451804;">Here is the latest weather from Mars</h2>
+      <p style="color: #451804;"> {{ mars.weather}}</p>
+    </div>
+    <!-- Wiki table -->
+    <div class="col col-lg-6 col-6  mb-5">
+      <h2 style="color: #451804;">Mars Facts</h2>
+      <table>{{ mars.facts|safe }}</table>
+    </div>
+  </div>
+
 
   <!-- Hemishpere Section -->
   <div class="container">
     <div class="col col-12">
       <h2 style="color: #451804;"> Here is a closer look at the hemispheres of Mars </h2>
 
-     
+
       <div class="row">
         {% for hemisphere in mars.hemispheres %}
         <div class="col col-lg-5 col-6 mt-3">
@@ -67,7 +68,7 @@
         </div>
         {% endfor %}
       </div>
-     
+
 
     </div>
 

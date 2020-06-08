@@ -6,8 +6,8 @@ import time
 
 def init_browser():
     # Mac Users
-    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
-    return(Browser('chrome', **executable_path, headless=False))
+    executable_path = {'executable_path': 'chromedriver'}
+    return Browser('chrome', **executable_path, headless=False)
     
     # Windows Users
     # executable_path = {'executable_path': 'chromedriver.exe'}
