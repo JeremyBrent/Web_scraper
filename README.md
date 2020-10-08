@@ -4,7 +4,7 @@
 ![Mars scraper homepage!](Assets/screenshots/screenshot.png "Mars scraper homepage")
 
 
-## How to run the code (TBA -- I am having chromedriver bugs):
+## How to run the code:
 1. Clone the repository to your local computer, python
 2. If you are using Windows, in the scrape_mars.py file, you will need to uncomment lines 9-10 and comment lines 13-14.
 3. Download the most recent chromedriver (It is important that the version of chrome and the chromedriver match).
